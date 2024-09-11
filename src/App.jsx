@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Home from './Pages/Home'
+import LoginPage from './Pages/LoginPage'
+
+
+
+
 
 const App = () => {
   return (
-    <div className='App'>
-      <h1>Hello World!</h1>
+    <div className='bg-netflix-black text-white'>
+      {/* <LoginPage /> */}
+      <Home />
     </div>
   )
 }
