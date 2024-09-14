@@ -6,6 +6,7 @@ import { login, logout, selectUser } from './App/slice'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './firebase'
 import LogInScreen from './Pages/LogInScreen'
+import Profile from './Pages/Profile'
 
 
 
@@ -41,6 +42,7 @@ const App = () => {
           <LogInScreen />
         ) : (
           <Routes>
+            <Route path='/profile' element={<Profile />} />
             <Route path="/" element={<Home />} />
           </Routes>
         )}
