@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SearchMovies from "./SearchMovies";
 
 const NavBar = () => {
 
@@ -18,7 +19,7 @@ const NavBar = () => {
   }, [])
 
   return (
-    <nav className={show ? "bg-neutral-950 flex h-10 px-4 w-full md:h-16 md:px-14 items-center fixed justify-between" : "bg-transparent flex h-10 px-4 w-full md:h-16 md:px-14 items-center fixed justify-between" }>
+    <nav className={show ? "bg-neutral-950 flex h-10 px-4 w-full md:h-16 md:px-14 items-center fixed justify-between z-10" : "bg-gradient-to-b from-black/80 to-black/0 flex h-10 px-4 w-full md:h-16 md:px-14 items-center fixed justify-between z-0" }>
 
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="" className=" h-4 mr-5 md:h-8 md:w-28" />
       <div className="flex-1 hidden md:hidden lg:block">
@@ -34,24 +35,7 @@ const NavBar = () => {
       
 
       <div className="flex items-center ">
-        <svg
-          className="mr-4 hidden lg:block md:block"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          role="img"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-          data-icon="MagnifyingGlassStandard"
-          aria-hidden="true"
-        >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.6177 17.0319C14.078 18.2635 12.125 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 12.125 18.2635 14.078 17.0319 15.6177L22.7071 21.2929L21.2929 22.7071L15.6177 17.0319Z"
-            fill="currentColor"
-          ></path>
-        </svg>
+        <SearchMovies />
         <p className="text-sm mr-4 hidden lg:block md:block">Children</p>
         <svg
           className="mr-4"

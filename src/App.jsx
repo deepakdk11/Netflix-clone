@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Home from './Pages/Home'
-import LoginPage from './Pages/LoginPage'
+import GetStarted from './Pages/GetStarted'
+import SignIn from './Pages/SignIn'
 
 
 
@@ -9,8 +10,9 @@ import LoginPage from './Pages/LoginPage'
 const App = () => {
   return (
     <div className='bg-netflix-black text-white'>
-      {/* <LoginPage /> */}
-      <Home />
+      <SignIn />
+      {/* <GetStarted /> */}
+      {/* <Home /> */}
     </div>
   )
 }
