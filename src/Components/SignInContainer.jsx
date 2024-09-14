@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import {auth} from '../firebase'
 
@@ -50,7 +49,7 @@ const SignInContainer = () => {
                 <input className='mr-2 checked:bg-white' type="checkbox" name="check" id="remember" />
                 <label htmlFor="remember">Remember me</label>
               </div>
-              <p className='mt-3 text-neutral-400'>New to Netflix? <span className='font-medium text-white' onClick={register}>Sign up now.</span></p>
+              <p className='mt-3 text-neutral-400'>New to Netflix? <span className='font-medium cursor-pointer text-white' onClick={register}>Sign up now.</span></p>
               <p className='mt-5 text-sm text-neutral-400'>This page is protected by Google reCAPTCHA to</p>
               <p className='text-sm text-neutral-400'>ensure you're not a bot. <span className='text-blue-600'>Learn more.</span></p>
             </div>

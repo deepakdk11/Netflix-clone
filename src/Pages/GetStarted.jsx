@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const GetStarted = () => {
+const GetStarted = ({setSignIn}) => {
   return (
     <div className='bg-[url("https://gtwallpaper.org/sites/default/files/wallpaper/246844/netflix-background-246844-2224648-4918717.png")] bg-cover '>
         <div className='h-screen  bg-black/70'>
@@ -16,7 +16,7 @@ const GetStarted = () => {
                     </select>
                 </div>
                 
-               <button className='bg-netflixRed py-1 px-3 rounded-md'><Link to={"/login"}>Sign In</Link></button>  
+               <button className='bg-netflixRed py-1 px-3 rounded-md' onClick={() => setSignIn(true)}>Sign In</button>  
             </div>
            
             
