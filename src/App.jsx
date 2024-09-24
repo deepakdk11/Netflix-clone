@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import { useDispatch, useSelector } from 'react-redux'
-import { login, logout, selectUser } from './App/slice'
+import { login, logout, selectUser } from './features/slice'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './firebase'
 import LogInScreen from './Pages/LogInScreen'
@@ -20,20 +20,22 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth,(userAuth) => {
-      if(userAuth){
-        dispatch(login({
-          uid:userAuth.uid,
-          email:userAuth.email
-        }))
-      }
-      else{
-        dispatch(logout())
+    const unsubscribe = onAuthStateChanged(auth, (userAuth) => {
+      if (userAuth) {
+        console.log(userAuth);
+        dispatch(
+          login({
+            uid: userAuth.uid,
+            email: userAuth.email,
+          })
+        );
+      } else {
+        dispatch(logout());
       }
     });
 
-    return unsubscribe
-  },[])
+    return unsubscribe;
+  }, [dispatch]);
 
   return (
       <div className='bg-netflix-black text-white'>

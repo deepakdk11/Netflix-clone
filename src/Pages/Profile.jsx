@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux'
-import { selectUser } from '../App/slice'
+import { selectUser } from '../features/slice'
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase'
 

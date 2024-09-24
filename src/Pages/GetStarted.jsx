@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const GetStarted = ({setSignIn}) => {
   return (
@@ -29,7 +28,7 @@ const GetStarted = ({setSignIn}) => {
             <p className='mt-6 text-sm'>Ready to watch? Enter your email to create or restart your membership.</p>
             <div className='mt-5'>
                 <input className='mr-2 text-white bg-black/[.2] py-2 pl-4 pr-28 border-2 border-slate-500 rounded-md placeholder:text-slate-300 placeholder:font-medium' type="email" name="email" placeholder='Email Address' />
-                <Link to={'/home'}><button className='mt-3 md:m-0 py-3 px-12 text-lg font-medium rounded-md bg-netflixRed'>Get Started    &gt;</button></Link>
+                <button className='mt-3 md:m-0 py-3 px-12 text-lg font-medium rounded-md bg-netflixRed' onClick={() => setSignIn(true)}>Get Started    &gt;</button>
             </div>
         </main>
     </div>
