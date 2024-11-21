@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      // netflixFont: 
+    },
     extend: {
       colors: {
         'netflix-black': '#141414',
@@ -13,7 +16,6 @@ export default {
         "netflixRed" : "rgb(229, 9, 20)",
         "netflixinputBorderColor" : "light-dark(rgb(118, 118, 118), rgb(133, 133, 133));",
       },
-
     },
   },
   plugins: [],

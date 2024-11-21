@@ -15,39 +15,43 @@ import Profile from './Pages/Profile'
 
 const App = () => {
 
-  const user = useSelector(selectUser);
+  // const user = useSelector(selectUser);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (userAuth) => {
-      if (userAuth) {
-        console.log(userAuth);
-        dispatch(
-          login({
-            uid: userAuth.uid,
-            email: userAuth.email,
-          })
-        );
-      } else {
-        dispatch(logout());
-      }
-    });
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, (userAuth) => {
+  //     if (userAuth) {
+  //       console.log(userAuth);
+  //       dispatch(
+  //         login({
+  //           uid: userAuth.uid,
+  //           email: userAuth.email,
+  //         })
+  //       );
+  //     } else {
+  //       dispatch(logout());
+  //     }
+  //   });
 
-    return unsubscribe;
-  }, [dispatch]);
+  //   return unsubscribe;
+  // }, [dispatch]);
 
   return (
       <div className='bg-netflix-black text-white'>
         <BrowserRouter>
-        {!user ? (
+        {/* {!user ? (
           <LogInScreen />
         ) : (
           <Routes>
             <Route path='/profile' element={<Profile />} />
             <Route path="/" element={<Home />} />
           </Routes>
-        )}
+        )} */}
+        <Routes>
+            <Route path='/profile' element={<Profile />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
         </BrowserRouter>
     </div>
     
